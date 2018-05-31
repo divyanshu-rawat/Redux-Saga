@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import createSagaMiddleware from 'redux-saga'
-import { helloSaga } from './Sagas/sagas';
+import createSagaMiddleware from 'redux-saga';
+import rootSaga from './Sagas/sagas';
 import { Reducer } from './Reducer/reducer';
 // import { Counter } from './Components/counter';
 
@@ -16,7 +16,7 @@ const store = createStore(
   applyMiddleware(sagaMiddleware)
 )
 
-sagaMiddleware.run(helloSaga)
+sagaMiddleware.run(rootSaga);
 
 // const action = type => store.dispatch({type})
 

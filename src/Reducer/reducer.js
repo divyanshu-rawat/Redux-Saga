@@ -6,7 +6,7 @@ const intialState = {
 
 export const Reducer = (state = intialState , action) =>{	
 
-	console.log('clciked', action);
+	console.log('clicked', action);
 	switch(action.type){
 
 		case 'INCREMENT':
